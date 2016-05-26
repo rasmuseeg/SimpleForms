@@ -178,6 +178,23 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201605261545053_InitialCreate.cs" />
+    <Compile Include="Migrations\201605261545053_InitialCreate.Designer.cs">
+      <DependentUpon>201605261545053_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201605261617460_AddedNameToFieldPrevalues.cs" />
+    <Compile Include="Migrations\201605261617460_AddedNameToFieldPrevalues.Designer.cs">
+      <DependentUpon>201605261617460_AddedNameToFieldPrevalues.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201605261624260_AddedFieldRelationToUserField.cs" />
+    <Compile Include="Migrations\201605261624260_AddedFieldRelationToUserField.Designer.cs">
+      <DependentUpon>201605261624260_AddedFieldRelationToUserField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201605261657376_UserFieldValuesRelations.cs" />
+    <Compile Include="Migrations\201605261657376_UserFieldValuesRelations.Designer.cs">
+      <DependentUpon>201605261657376_UserFieldValuesRelations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\DateType.cs" />
     <Compile Include="Models\UserFieldValue.cs" />
@@ -255,11 +272,6 @@
     <Content Include="Views\FormFields\Details.cshtml" />
     <Content Include="Views\FormFields\Edit.cshtml" />
     <Content Include="Views\FormFields\Index.cshtml" />
-    <Content Include="Views\UserFieldValues\Create.cshtml" />
-    <Content Include="Views\UserFieldValues\Delete.cshtml" />
-    <Content Include="Views\UserFieldValues\Details.cshtml" />
-    <Content Include="Views\UserFieldValues\Edit.cshtml" />
-    <Content Include="Views\UserFieldValues\Index.cshtml" />
     <Content Include="Views\UserFields\Create.cshtml" />
     <Content Include="Views\UserFields\Delete.cshtml" />
     <Content Include="Views\UserFields\Details.cshtml" />
@@ -270,6 +282,11 @@
     <Content Include="Views\FieldPrevalues\Details.cshtml" />
     <Content Include="Views\FieldPrevalues\Edit.cshtml" />
     <Content Include="Views\FieldPrevalues\Index.cshtml" />
+    <Content Include="Views\UserFieldValues\Create.cshtml" />
+    <Content Include="Views\UserFieldValues\Delete.cshtml" />
+    <Content Include="Views\UserFieldValues\Details.cshtml" />
+    <Content Include="Views\UserFieldValues\Edit.cshtml" />
+    <Content Include="Views\UserFieldValues\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -281,6 +298,20 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201605261545053_InitialCreate.resx">
+      <DependentUpon>201605261545053_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605261617460_AddedNameToFieldPrevalues.resx">
+      <DependentUpon>201605261617460_AddedNameToFieldPrevalues.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605261624260_AddedFieldRelationToUserField.resx">
+      <DependentUpon>201605261624260_AddedFieldRelationToUserField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605261657376_UserFieldValuesRelations.resx">
+      <DependentUpon>201605261657376_UserFieldValuesRelations.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

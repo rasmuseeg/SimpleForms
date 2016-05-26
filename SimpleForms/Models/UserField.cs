@@ -11,5 +11,8 @@ namespace SimpleForms.Models
         public int Id { get; set; }
         public int UserId { get; set; }
         public int FieldId { get; set; }
+        public virtual FormField Field { get; set; }
+        public virtual ApplicationUser User { get; set; }
+        public virtual IEnumerable<UserFieldValue> FieldValues { get; set; }
     }
 }

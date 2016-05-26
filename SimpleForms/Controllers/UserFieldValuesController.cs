@@ -46,7 +46,7 @@ namespace SimpleForms.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,String,Numeric")] UserFieldValue userFieldValue)
+        public ActionResult Create([Bind(Include = "Id,String,Numeric,UserFieldId")] UserFieldValue userFieldValue)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace SimpleForms.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,String,Numeric")] UserFieldValue userFieldValue)
+        public ActionResult Edit([Bind(Include = "Id,String,Numeric,UserFieldId")] UserFieldValue userFieldValue)
         {
             if (ModelState.IsValid)
             {

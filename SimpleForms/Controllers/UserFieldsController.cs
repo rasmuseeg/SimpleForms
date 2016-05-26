@@ -17,7 +17,8 @@ namespace SimpleForms.Controllers
         // GET: UserFields
         public ActionResult Index()
         {
-            return View(db.UserFields.ToList());
+            var userFields = db.UserFields.Include(u => u.Field);
+            return View(userFields.ToList());
         }
 
         // GET: UserFields/Details/5
@@ -38,6 +39,7 @@ namespace SimpleForms.Controllers
         // GET: UserFields/Create
         public ActionResult Create()
         {
+            ViewBag.FieldId = new SelectList(db.FormFields, "Id", "Name");
             return View();
         }
 
@@ -55,6 +57,7 @@ namespace SimpleForms.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.FieldId = new SelectList(db.FormFields, "Id", "Name", userField.FieldId);
             return View(userField);
         }
 
@@ -70,6 +73,7 @@ namespace SimpleForms.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.FieldId = new SelectList(db.FormFields, "Id", "Name", userField.FieldId);
             return View(userField);
         }
 
@@ -86,6 +90,7 @@ namespace SimpleForms.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.FieldId = new SelectList(db.FormFields, "Id", "Name", userField.FieldId);
             return View(userField);
         }
 

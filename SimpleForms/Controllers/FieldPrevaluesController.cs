@@ -48,7 +48,7 @@ namespace SimpleForms.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,String,Int,FieldTypeId")] FieldPrevalue fieldPrevalue)
+        public ActionResult Create([Bind(Include = "Id,Name,String,Int,FieldTypeId")] FieldPrevalue fieldPrevalue)
         {
             if (ModelState.IsValid)
             {
@@ -82,7 +82,7 @@ namespace SimpleForms.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,String,Int,FieldTypeId")] FieldPrevalue fieldPrevalue)
+        public ActionResult Edit([Bind(Include = "Id,Name,String,Int,FieldTypeId")] FieldPrevalue fieldPrevalue)
         {
             if (ModelState.IsValid)
             {

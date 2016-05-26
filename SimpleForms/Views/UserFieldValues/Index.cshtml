@@ -17,6 +17,9 @@
         <th>
             @Html.DisplayNameFor(model => model.Numeric)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserFieldId)
+        </th>
         <th></th>
     </tr>
 
@@ -27,6 +30,9 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Numeric)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserFieldId)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |

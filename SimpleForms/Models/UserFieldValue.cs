@@ -10,6 +10,8 @@ namespace SimpleForms.Models
     {
         public int Id { get; set; }
         public string String { get; set; }
-        public int Numeric { get; set; }
+        public Nullable<int> Numeric { get; set; }
+        public int UserFieldId { get; set; }
+        public virtual UserField UserField { get; set; }
     }
 }
