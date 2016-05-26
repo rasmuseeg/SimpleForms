@@ -1,0 +1,42 @@
+﻿@model SimpleForms.Models.FieldPrevalue
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>FieldPrevalue</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FieldType.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FieldType.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.String)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.String)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Int)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Int)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
